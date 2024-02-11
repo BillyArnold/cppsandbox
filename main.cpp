@@ -7,6 +7,9 @@
 
 #include <iostream>
 
+// defining macros not recommended, as constants are preferred
+#define MY_NAME "billy"
+
 void doPrint(); // this is a forward declaration of a function, needed so that doprint will be identified
 int add(int x, int y);
 
