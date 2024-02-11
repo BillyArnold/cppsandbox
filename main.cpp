@@ -6,12 +6,15 @@
 //
 
 #include <iostream>
+#include "add.h"
 
 // defining macros not recommended, as constants are preferred
 #define MY_NAME "billy"
 
 void doPrint(); // this is a forward declaration of a function, needed so that doprint will be identified
-int add(int x, int y);
+#if 0 //dont compile anything starting here,
+//convenient way to comment out something with comments
+#endif
 
 int main(int argc, const char * argv[]) {
     std::cout << "Enter a number to be multiplied" << std::endl;//cout means character output
