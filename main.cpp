@@ -8,6 +8,7 @@
 #include <iostream>
 
 void doPrint(); // this is a forward declaration of a function, needed so that doprint will be identified
+int add(int x, int y);
 
 int main(int argc, const char * argv[]) {
     std::cout << "Enter a number to be multiplied" << std::endl;//cout means character output
@@ -19,6 +20,7 @@ int main(int argc, const char * argv[]) {
     //int a, b; //define 2 integers
     
     std::cout << "Double that number is " << x * 2 << "\n";
+    std::cout << "1 + 2 is " << add(1, 2) << "\n";
     doPrint();
     
     //double y; // define a double
