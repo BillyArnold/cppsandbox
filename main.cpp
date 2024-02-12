@@ -20,6 +20,9 @@ int main(int argc, const char * argv[]) {
     std::cout << "Enter a number to be multiplied" << std::endl;//cout means character output
     //std::cout << "Another" << " Word\n"; // \n is better than endl because endl flushes the buffer
     //data types
+    if (1 < 2) {
+        std::cout << "1 is more than 2";
+    }
     
     int x{}; //define variable named x that is an int
     std::cin >> x; // character input from user to go into x
@@ -40,4 +43,13 @@ int main(int argc, const char * argv[]) {
 // void return type for functions that don't explicitly return anything
 void doPrint() {
     std::cout << "Printing\n";
+    
+    for (int i = 0; i < 6; i++) {
+        std::cout << "i is " << i;
+    }
+    
+    int numbers[6] = {1, 2, 3, 4, 5, 6}; // initialise a list of 6
+    for (int i: numbers) { // loop through numbers directly
+        std::cout << i << "\n";
+    }
 }
