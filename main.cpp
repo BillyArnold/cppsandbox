@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "add.h"
+//#include <wx/wx.h>
 
 // defining macros not recommended, as constants are preferred
 #define MY_NAME "billy"
@@ -52,4 +53,6 @@ void doPrint() {
     for (int i: numbers) { // loop through numbers directly
         std::cout << i << "\n";
     }
+    
+    int size = sizeof(numbers) / sizeof(int); // get length of array by dividing the lenght in bytes by the length of the actual type
 }
