@@ -1,8 +1,8 @@
-#ifndef __HELLO_H
-#define __HELLO_H
-class HelloWorldApp : public wxApp {
-public:
+#include <wx/wx.h>
+
+class MyApp : public wxApp
+{
+  public:
     virtual bool OnInit();
+
 };
-DECLARE_APP(HelloWorldApp)
-#endif
