@@ -99,20 +99,36 @@ int main()
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
+    //vertices start from center?
 //    float vertices[] = {
-//        -0.5f, -0.5f, 0.0f, // left
-//         0.5f, -0.5f, 0.0f, // right
-//         0.0f,  0.5f, 0.0f  // top
+//    0.5f, 0.5f, 0.0f, // top right
+//    0.5f, -0.5f, 0.0f, // bottom right
+//    -0.5f, -0.5f, 0.0f, // bottom left
+//    -0.5f, 0.5f, 0.0f // top left
 //    };
+    
+    //two triangles
     float vertices[] = {
-    0.5f, 0.5f, 0.0f, // top right
-    0.5f, -0.5f, 0.0f, // bottom right
-    -0.5f, -0.5f, 0.0f, // bottom left
-    -0.5f, 0.5f, 0.0f // top left
+        -1.0f, -1.0f, 0.0f, //bottom left
+        -0.5f, 1.0f, 0.0f, //top 1 third
+        -0.0f, -1.0f, 0.0f, //bottom middle
+        0.5f, 1.0f, 0.0f, //top 2 third
+        1.0f, -1.0f, 0.0f, //bottom right
     };
-    unsigned int indices[] = { // note that we start from 0!
-    0, 1, 3, // first triangle
-    1, 2, 3 // second triangle
+    
+//    float vertices[] = {
+//    1.0f, 1.0f, 0.0f, // top right
+//    1.0f, -1.0f, 0.0f, // bottom right
+//    -1.0f, -1.0f, 0.0f, // bottom left
+//    -1.0f, 1.0f, 0.0f // top left
+//    };
+//    unsigned int indices[] = { // note that we start from 0!
+//    0, 1, 3, // first triangle
+//    1, 2, 3 // second triangle
+//    };
+    unsigned int indices[] = {
+      0, 1, 2,
+      2, 3, 4,
     };
 
     unsigned int VBO, VAO, EBO;
@@ -138,6 +154,9 @@ int main()
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
     glBindVertexArray(0);
+    
+    //makes it so that only lines of polygons show
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 
     // uncomment this call to draw in wireframe polygons.
